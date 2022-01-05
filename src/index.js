@@ -102,7 +102,7 @@ class Game extends React.Component {
 			return (
 				<li key={move}>
 					<button 
-						className={this.state.stepNumber === move ? 'selected-move' : null}
+						className={this.state.stepNumber === move ? 'bold-text' : null}
 						onClick={() => this.jumpTo(move)}
 					>
 						{desc}
@@ -121,7 +121,7 @@ class Game extends React.Component {
 				</div>
 
 				<div className="game-info">
-					<div>{status}</div>
+					<div className={winner ? 'bold-text' : null}>{status}</div>
 					<ol>{moves}</ol>	
 				</div>
 			</div>
